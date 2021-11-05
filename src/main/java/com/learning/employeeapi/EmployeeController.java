@@ -27,7 +27,7 @@ public class EmployeeController {
         emp2.setFirstName("arushi");
         emp2.setLastName("goyal");
         emp2.setOrganization("lizard");
-        emp2.setPhone("91-9810-337171");
+        emp2.setPhone("91-9953-827918");
 
         employees.add(emp1);
         employees.add(emp2);
