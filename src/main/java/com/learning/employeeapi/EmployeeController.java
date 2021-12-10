@@ -30,8 +30,15 @@ public class EmployeeController {
         emp2.setOrganization("lizard");
         emp2.setPhone("91-9953-827918");
 
+        Employee emp3 = new Employee() ;
+        emp3.setFirstName("shakti");
+        emp3.setLastName("man");
+        emp3.setOrganization("lizard");
+        emp3.setPhone("91-9953-812918");
+
         employees.add(emp1);
         employees.add(emp2);
+        employees.add(emp3);
 
     }
 
