@@ -31,7 +31,7 @@ public class EmployeeController {
         emp2.setPhone("91-9953-827918");
 
         Employee emp3 = new Employee() ;
-        emp3.setFirstName("shakti");
+        emp3.setFirstName("super");
         emp3.setLastName("man");
         emp3.setOrganization("lizard");
         emp3.setPhone("91-9953-812918");
