@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: employee-api
+  name: employee-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employee-api
+  template:
+    metadata:
+      labels:
+        app: employee-api
+    spec:
+      containers:
+        - image: quay.io/abvishno/oc-pipelines-employee-api
+          imagePullPolicy: Always
+          name: employee-api
+          ports:
+            - containerPort: 8080
+              protocol: TCP
