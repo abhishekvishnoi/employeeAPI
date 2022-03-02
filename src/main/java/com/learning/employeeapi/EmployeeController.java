@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.net.http.HttpResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,7 +45,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/getEmp/{id}")
-    public Employee getEmployee(@PathVariable String id){
+    public Employee getEmployee(@PathVariable String id, final HttpServletResponse response){
         logger.info("a request received to get employee with id :" + id);
         Employee emp = new Employee() ;
         emp.setFirstName("abhishek");
@@ -51,13 +53,16 @@ public class EmployeeController {
         emp.setOrganization("lizard");
         emp.setPhone("91-9810-337170");
 
+        response.setHeader("user" , "abhishekvishnoi");
+
         return emp;
     }
 
 
     @GetMapping("/getEmp")
-    public List<Employee> getEmployees(){
+    public List<Employee> getEmployees(final HttpServletResponse response){
         logger.info("a request received to get all employees");
+        response.setHeader("user" , "abhishekvishnoi");
         return employees;
     }
 
