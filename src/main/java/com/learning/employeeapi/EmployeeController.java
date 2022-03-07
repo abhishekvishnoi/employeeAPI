@@ -66,6 +66,26 @@ public class EmployeeController {
         return employees;
     }
 
+
+    @GetMapping("/browseEmp")
+    public List<Employee> browseEmployees(final HttpServletResponse response) throws Exception {
+
+        try{
+            logger.info("a request received to get all employees");
+            response.setHeader("user" , "abhishekvishnoi");
+
+            if(Math.random() >= 0.45)
+            {
+             throw new Exception("an exception occured...!!");
+            }
+
+        }catch(Exception exp){
+            logger.info("a request received to get all employees");
+            throw new Exception("an exception occured...!!");
+        }
+        return employees;
+    }
+
     @PostMapping("/addEmp")
     public void addEmployee(@RequestBody Employee emp) {
         logger.info("a request received to add a new employee");
