@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Api Documentation",
-    "description": "Api Documentation",
+    "title": "Employee Api",
+    "description": "Employee Api",
     "termsOfService": "urn:tos",
     "contact": {},
     "license": {
